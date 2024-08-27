@@ -1,3 +1,5 @@
 Für eine Vorschau im "BriefButler_Slide_Vorlagen" Ordner die index.html öffnen!
 
 Vorschau ist in Full HD!
+
+Slides wechseln automatisch!
