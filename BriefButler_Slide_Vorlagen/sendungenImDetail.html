@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sendungen im Detail</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = 'veranstaltungen.html';
+    }, 5000);
+  </script>
+
+</head>
+
+
+
+<body style=" background: url('img/defaultbg.png') no-repeat center center fixed; background-size: cover;">
+
+
+
+
+
+
+
+<div class="container ">
+
+  <div class="main-content">
+    <div class="text-rows">
+      <div class="header blue">
+        Sendungen im Detail
+        <div class="small-text">Small text below</div>
+      </div>
+
+      <div class="text-row">
+        <span class="row-title" id="PostalischeSendungen">Postalische Sendungen:</span>
+        <span class="row-value" id="postalischevalue">30.000</span>
+      </div>
+
+      <div class="text-row">
+        <span class="row-title" id="ElektronischeSendungen">Elektronische Sendungen:</span>
+        <span class="row-value" id="elektronischevalue">50.000</span>
+      </div>
+
+      <div class="text-row">
+        <span class="row-title" id="RegmailSendungen">Regmail Sendungen:</span>
+        <span class="row-value" id="regamilvalue">30.000</span>
+      </div>
+
+      <div class="text-row">
+        <span class="row-title" id="SendungenGesamt">Sendungen Gesamt:</span>
+        <span class="row-value" id="gesamtvalue">80.000</span>
+      </div>
+    </div>
+
+    <div class="chart">
+      <div id="Sendungen"> Sendungen </div>
+      <div id="SendungenNbr"> 80.000</div>
+      <div id="percentagestyle">
+        + 10.2%
+      </div>
+      <canvas id="pie"></canvas>
+    </div>
+
+  </div>
+</div>
+
+</body>
+
+</html>

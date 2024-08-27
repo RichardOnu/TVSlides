@@ -1,0 +1,580 @@
+/* General Styles */
+html {
+  color: #222;
+  font-size: 1.2em; /* Increased from 1em */
+  line-height: 1.6; /* Increased for better readability */
+}
+
+.fullscreen{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Calibri', sans-serif;
+  background-color: #f3f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Styles */
+.container, .main-container {
+  background-color: #ffffff;
+  border-radius: 12px; /* Slightly increased */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Increased shadow size */
+}
+
+.main-container {
+  padding: 200px; /* Increased from 150px */
+  border-radius: 12px; /* Slightly increased */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Increased shadow size */
+}
+
+.container {
+  max-width: 1200px; /* Increased from 900px */
+}
+
+/* Post Image Container */
+.postimage-container {
+  width: 90%; /* Increased from 80% */
+  max-width: 1200px; /* Increased from 900px */
+}
+
+/* Container Veranstaltungen */
+.container-veranstaltungen {
+  width: 90%; /* Increased from 80% */
+  max-width: 1200px; /* Increased from 900px */
+}
+
+/* Header Styles */
+.header {
+  padding: 30px; /* Increased from 20px */
+  font-size: 60px; /* Increased from 45px */
+}
+
+.white-subtitle {
+  font-size: 30px; /* Increased from 25px */
+}
+
+.small-text {
+  font-size: 16px; /* Increased from 12px */
+}
+
+/* Main Content Styles */
+.main-content-veranstaltungen {
+  padding: 30px; /* Increased from 20px */
+}
+
+.main-content {
+  padding: 30px; /* Increased from 20px */
+}
+
+/* Text Rows */
+.text-rows {
+  padding-right: 30px; /* Increased from 20px */
+}
+
+.text-row {
+  padding: 15px 0; /* Increased from 10px 0 */
+}
+
+.row-title {
+  font-size: 1.2em; /* Increased font size */
+}
+
+/* Percentage and Number Styles */
+#percentagestyle {
+  border-radius: 12px; /* Slightly increased */
+  max-height: 35px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 1.2em; /* Increased font size */
+}
+
+.transparentBackground{
+  background-color: transparent;
+}
+
+.Black{
+  color: #222222;
+}
+
+#SendungenNbr {
+  font-size: 3em; /* Increased from xx-large */
+}
+
+/* Post Content Styles */
+.post-container {
+  border-radius: 20px; /* Increased from 15px */
+  padding: 30px; /* Increased from 20px */
+  max-width: 1000px; /* Increased from 800px */
+}
+
+.post-content {
+  padding: 30px; /* Increased from 20px */
+  border-radius: 20px; /* Increased from 15px */
+}
+
+.post-textbox {
+  margin: 40px; /* Increased from 30px */
+  border-radius: 20px; /* Increased from 15px */
+}
+
+.post-text-content {
+  margin: 60px; /* Increased from 50px */
+}
+
+.post-image-container {
+  margin: 40px; /* Increased from 30px */
+}
+
+.post-rounded-image {
+  border-radius: 20px; /* Increased from 15px */
+}
+
+/* Veranstaltung Styles */
+.Veranstaltung {
+  font-size: 3em; /* Increased from xx-large */
+}
+
+/* Chart Styles */
+.chart {
+  border-radius: 12px; /* Slightly increased */
+  padding: 20px; /* Increased from 20px */
+  margin-left: 50px; /* Increased from 50px */
+
+}
+
+.chart-long {
+  border-radius: 12px; /* Slightly increased */
+  padding: 20px; /* Adjusted padding */
+  display: grid; /* Use grid display */
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 10px; /* Adds space between elements */
+}
+
+.agenda {
+  margin-left: 20px;
+  /* Removed flex: 1; */
+}
+
+.VeranstaltungsText {
+  margin-left: 20px;
+  /* Removed flex: 1; */
+}
+
+/* Additional Styles */
+.day {
+  font-size: 1.5em; /* Increased font size */
+}
+
+.divider {
+  margin: 30px 0; /* Increased from 20px 0 */
+
+}
+
+.dividerh {
+  width: 3px; /* Increased thickness */
+  margin: 30px; /* Increased from 20px */
+}
+
+.xlarge-title {
+  font-size: 40px; /* Increased from 30px */
+  margin-bottom: 40px; /* Increased from 30px */
+}
+
+.large-title {
+  font-size: 30px; /* Increased from 24px */
+  margin-bottom: 30px; /* Increased from 20px */
+}
+
+.large-text {
+  font-size: 100px; /* Increased from 78px */
+}
+
+.item {
+  margin: 0 30px; /* Increased from 20px */
+}
+
+.text-block {
+  margin-bottom: 20px; /* Increased from 10px */
+}
+
+.image-block {
+  width: 250px; /* Increased from 200px */
+  height: 250px; /* Increased from 200px */
+}
+
+.main-window {
+  width: 1000px; /* Increased from 800px */
+  height: 600px; /* Increased from 450px */
+}
+
+.border {
+  padding: 30px; /* Increased from 20px */
+}
+
+
+
+
+
+
+/* Container Styles */
+.container, .main-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 900px;
+}
+
+.postimage-container {
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 900px;
+}
+
+.container-veranstaltungen {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 900px;
+  position: fixed;
+}
+
+/* Header Styles */
+.header {
+  padding: 20px;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: left;
+  align-self: start;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.white-subtitle {
+  color: #5c5d5e;
+  font-size: 25px;
+}
+
+.small-text {
+  color: #5c5d5e;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Main Content Styles */
+.main-content-veranstaltungen {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1;
+  top: 15%;
+  left: 25%;
+  position: absolute;
+}
+
+.main-content {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* Text Rows */
+.text-rows {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.text-row {
+  padding: 10px 0;
+  border-bottom: 1px solid #009fe3;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.text-row:last-child {
+  border-bottom: none;
+}
+
+.row-title {
+  font-weight: bold;
+}
+
+/* Percentage and Number Styles */
+#percentagestyle {
+  background-color: #ecfdf5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #18b9a7;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+#SendungenNbr {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+/* Post Content Styles */
+.post-container {
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.post-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  margin: 30px;
+  background-color: blue;
+  border-radius: 15px;
+}
+
+.post-textbox {
+  flex: 1;
+  color: black;
+  margin: 30px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.post-text-content {
+  margin: 50px;
+}
+
+.post-image-container {
+  margin: 30px;
+}
+
+.post-rounded-image {
+  border-radius: 15px;
+}
+
+/* Veranstaltung Styles */
+.Veranstaltung {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+/* Chart Styles */
+.chart {
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-left: 50px;
+}
+
+.chart-long {
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Adjusted for longer appearance */
+  width: 500px;
+  max-height: 150px;
+}
+
+tr{
+  margin-bottom: 15px;
+}
+
+/* Additional Styles */
+.day {
+  color: #dcb790;
+  font-weight: bold;
+}
+
+.bluebackground {
+  background-color: #0096c7;
+}
+
+.header .white {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.divider {
+  border-bottom: 2px solid #dcdcdc;
+  margin: 20px 0;
+}
+
+.dividerh {
+  align-self: center;
+  width: 2px;
+  background-color: #dcdcdc;
+  margin: 20px;
+}
+
+.xlarge-title {
+  font-size: 30px;
+  color: #5c5d5e;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.stack-panel {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+
+
+.horizontal {
+  flex-direction: row;
+}
+
+.text-block-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item {
+  margin: 0 20px;
+}
+
+.text-block {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.large-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5c5d5e;
+  margin-bottom: 20px;
+}
+
+.large-text {
+  font-size: 78px;
+  color: #009fe3;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #5c5d5e;
+}
+
+.blue {
+  color: #009fe3;
+  font-weight: bold;
+}
+
+.white {
+  color: white;
+  font-weight: bold;
+}
+
+.grey {
+  color: #5c5d5e;
+}
+
+.lightgrey {
+  color: #b0deed;
+}
+
+.image-block {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.main-window {
+  width: 800px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border {
+  background-color: #f3f6f8;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restrict{
+  max-height: 500px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Utility Styles */
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
