@@ -186,6 +186,9 @@ body {
   font-size: 40px; /* Increased from 30px */
   margin-bottom: 40px; /* Increased from 30px */
 }
+.black{
+  color: black;
+}
 
 .large-title {
   font-size: 30px; /* Increased from 24px */
@@ -275,6 +278,10 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+}
+
+.whitebackground{
+  background-color: #f3f6f8;
 }
 
 .white-subtitle {
