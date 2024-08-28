@@ -263,7 +263,7 @@ body {
 }
 
 .fade-in.visible {
-  opacity: 1;
+  opacity: 5;
 }
 
 
@@ -445,7 +445,7 @@ body {
 }
 
 .chart-long.visible {
-  opacity: 1;
+  opacity: 5;
 }
 
 tr{
