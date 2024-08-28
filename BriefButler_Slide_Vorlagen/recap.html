@@ -16,16 +16,18 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body style=" background: url('img/greybg.png') no-repeat center center fixed; background-size: cover;">
+<body style="background: url('img/greybg.png') no-repeat center center fixed; background-size: cover;">
 
 <table>
   <div style="border-radius: 25px">
     <tr>
-      <td><div style="margin-top: 10px; color: #222222" class="recaptitle center" id="recapText">RECAP JULI 2024</div></td>
+      <td>
+        <div style="margin-top: 10px; color: #222222" class="recaptitle center" id="recapText">RECAP JULI 2024</div>
+      </td>
     </tr>
     <tr>
       <td>
-        <div class="restrict main-container ">
+        <div class="restrict main-container">
           <div class="stack-panel vertical">
             <!-- Text Rows Section -->
             <div class="stack-panel vertical">
@@ -33,7 +35,6 @@
                 <div class="stack-panel vertical item">
                   <div class="text-block blue large-text" id="neukundenAT">15</div>
                   <div class="text-block grey small-text" id="neukundenATName">Neukunden AT</div>
-                  <div id="counter"></div> <!-- Counter will display here -->
                 </div>
 
                 <div class="stack-panel vertical item">
@@ -49,17 +50,17 @@
 
               <div class="stack-panel horizontal text-block-container">
                 <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="gesamtSendungen">200.000</div>
+                  <div class="text-block blue large-text" id="gesamtSendungen">200000</div>
                   <div class="text-block grey small-text" id="gesamtSendungenName">Gesamt Sendungen</div>
                 </div>
 
                 <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="elektrSendungen">100.000</div>
+                  <div class="text-block blue large-text" id="elektrSendungen">100000</div>
                   <div class="text-block grey small-text" id="elektrSendungenName">elektr. Sendungen</div>
                 </div>
 
                 <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="sendungen">100.000</div>
+                  <div class="text-block blue large-text" id="sendungen">100000</div>
                   <div class="text-block grey small-text" id="sendungenName">Sendungen</div>
                 </div>
               </div>
@@ -98,15 +99,52 @@
 
 <img src="img/daughter_phone3_high_heller.png" style="position: absolute; left: 5%; bottom: 5%; height: 800px; width: 400px">
 
-<!-- Initialize the CountUp.js here -->
+<!-- Initialize the Counter Animation here -->
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  function loadCounter(el) {
+    var targetValue = parseInt(el.innerText, 10);
+    var reduction = Math.floor(Math.random() * 10 + 1); // Random number between 1 and 10
+    var startValue = targetValue - reduction < 0 ? targetValue : targetValue - reduction; // Ensure startValue is non-negative
+    var duration = 8000;
+    var frameRate = 60;
+
+    var totalFrames = duration / (1000 / frameRate);
+    var increment = (targetValue - startValue) / totalFrames;
+
+    var currentCount = startValue;
+
+    function updateCounter() {
+      currentCount += increment;
+      if (currentCount >= targetValue) {
+        currentCount = targetValue;
+      }
+      el.innerText = Math.floor(currentCount);
+
+      if (currentCount < targetValue) {
+        // Call updateCounter again after a random interval between 50ms and 150ms
+        setTimeout(updateCounter, Math.floor(Math.random() * 100) + 50);
+      }
+    }
+
+    el.innerText = startValue; // Initialize the counter with the start value
+    setTimeout(updateCounter, Math.floor(Math.random() * 100) + 50); // Start the counter with a random delay
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    var counters = document.querySelectorAll('.text-block.blue.large-text');
+
+    counters.forEach(counter => {
+      loadCounter(counter);
+    });
+
     setTimeout(function() {
       window.location.href = 'sendungenImDetail.html';
-    }, 5000);
+    }, 10000);
   });
+
 </script>
 
 </body>
 
 </html>
+
