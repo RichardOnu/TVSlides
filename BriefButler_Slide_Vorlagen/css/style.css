@@ -266,8 +266,18 @@ body {
   position: fixed;
 }
 
+.recaptitle{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 20px;
+  font-size: 45px;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
 /* Header Styles */
 .header {
+
   padding: 20px;
   font-size: 45px;
   font-weight: bold;
