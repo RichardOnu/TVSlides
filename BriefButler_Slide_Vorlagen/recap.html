@@ -12,31 +12,21 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="manifest" href="site.webmanifest">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+
   <meta name="theme-color" content="#fafafa">
-
-  <script>
-    setTimeout(function() {
-      window.location.href = 'sendungenImDetail.html';
-    }, 5000);
-  </script>
 </head>
-
-
 
 <body style=" background: url('img/greybg.png') no-repeat center center fixed; background-size: cover;">
 
 <table>
   <div style="border-radius: 25px">
     <tr>
-      <td><div style = "margin-top: 10px; color: #222222" class="recaptitle center"  id="recapText">RECAP JULI 2024</div></td>
-
-
+      <td><div style="margin-top: 10px; color: #222222" class="recaptitle center" id="recapText">RECAP JULI 2024</div></td>
     </tr>
     <tr>
-
       <td>
         <div class="restrict main-container ">
-
           <div class="stack-panel vertical">
             <!-- Text Rows Section -->
             <div class="stack-panel vertical">
@@ -44,6 +34,7 @@
                 <div class="stack-panel vertical item">
                   <div class="text-block blue large-text" id="neukundenAT">15</div>
                   <div class="text-block grey small-text" id="neukundenATName">Neukunden AT</div>
+                  <div id="counter"></div> <!-- Counter will display here -->
                 </div>
 
                 <div class="stack-panel vertical item">
@@ -77,7 +68,7 @@
 
             <!-- Images Section -->
             <div class="stack-panel vertical">
-              <div style = "padding-top: 60px" class="xlarge-title center" id="topKunden">Unsere TOP-KUNDEN</div>
+              <div style="padding-top: 60px" class="xlarge-title center" id="topKunden">Unsere TOP-KUNDEN</div>
 
               <div class="stack-panel horizontal center">
                 <div class="stack-panel vertical item">
@@ -104,10 +95,25 @@
     </tr>
 
   </div>
-
 </table>
 
-<img src="img/daughter_phone3_high_heller.png"  style ="position: absolute; left: 5%; bottom: 5%; height: 800px; width: 400px">
+<img src="img/daughter_phone3_high_heller.png" style="position: absolute; left: 5%; bottom: 5%; height: 800px; width: 400px">
+
+<!-- Initialize the CountUp.js here -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var counter = new CountUp('counter', 0, 1234, 0, 2.5);  // duration is set to 2.5 seconds
+    if (!counter.error) {
+      counter.start();
+    } else {
+      console.error(counter.error);
+    }
+
+    setTimeout(function() {
+      // window.location.href = 'sendungenImDetail.html';
+    }, 5000);
+  });
+</script>
 
 </body>
 
