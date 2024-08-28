@@ -165,8 +165,8 @@
 <script>
   function loadCounter(el) {
     var targetValue = parseInt(el.innerText, 10);
-    var reduction = Math.floor(Math.random() * 10 + 1); // Random number between 1 and 10
-    var startValue = targetValue - reduction < 0 ? targetValue : targetValue - reduction; // Ensure startValue is non-negative
+    var reduction = Math.floor(Math.random() * 10 + 1);
+    var startValue = targetValue - reduction < 0 ? targetValue : targetValue - reduction;
     var duration = 8000;
     var frameRate = 60;
 
@@ -178,7 +178,7 @@
     function updateCounter() {
       var now = new Date();
       if (now.getHours() >= 18 || now.getHours() < 7) {
-        return; // Stop the counter if it's later than 18:00
+        return;
       }
 
       currentCount += increment;
@@ -188,27 +188,27 @@
       el.innerText = Math.floor(currentCount);
 
       if (currentCount < targetValue) {
-        // Call updateCounter again after a random interval between 50ms and 150ms
+
         setTimeout(updateCounter, Math.floor(Math.random() * 100) + 50);
       }
     }
 
-    el.innerText = startValue; // Initialize the counter with the start value
-    setTimeout(updateCounter, Math.floor(Math.random() * 100) + 50); // Start the counter with a random delay
+    el.innerText = startValue;
+    setTimeout(updateCounter, Math.floor(Math.random() * 100) + 50);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    // Hide the throbber and show the content when DOM is fully loaded
+
     document.getElementById('throbber').style.display = 'none';
     document.getElementById('content').style.display = 'block';
 
-    // Initialize counters
+
     var counters = document.querySelectorAll('.text-block.blue.large-text');
     counters.forEach(counter => {
       loadCounter(counter);
     });
 
-    // Redirect after a delay
+
     setTimeout(function() {
       window.location.href = 'sendungenImDetail.html';
     }, 12000);
