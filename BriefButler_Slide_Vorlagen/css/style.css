@@ -256,6 +256,17 @@ body {
   max-width: 900px;
 }
 
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+
 .container-veranstaltungen {
   display: flex;
   flex-direction: column;
@@ -426,9 +437,15 @@ body {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Adjusted for longer appearance */
+  align-items: flex-start;
   width: 500px;
   max-height: 150px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.chart-long.visible {
+  opacity: 1;
 }
 
 tr{

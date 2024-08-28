@@ -15,22 +15,29 @@
   <meta name="theme-color" content="#fafafa">
 
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add 'visible' class to all elements with class 'chart-long'
+      document.querySelectorAll('.chart-long').forEach(element => {
+        element.classList.add('visible');
+      });
+    });
+
     setTimeout(function() {
       window.location.href = 'social.html';
     }, 7000);
   </script>
 </head>
 
-<body style=" background: url('img/defaultbg.png') no-repeat center center fixed; background-size: cover;">
+<body style="background: url('img/defaultbg.png') no-repeat center center fixed; background-size: cover;">
 
 <div style="margin-top: 100px" class="main-content fullscreen center">
 
   <table>
     <tr>
       <td>
-          <div class="transparentBackground header white center bluebackground">
-            Veranstaltungen
-            <div class="white-subtitle white">Alle kommenden Events auf einen Blick</div>
+        <div class="transparentBackground header white center bluebackground">
+          Veranstaltungen
+          <div class="white-subtitle white">Alle kommenden Events auf einen Blick</div>
         </div>
       </td>
       <td>
@@ -59,37 +66,6 @@
                 </td>
               </tr>
             </table>
-
-
-
-          </div>
-
-          <div class="chart-long">
-            <table>
-              <tr>
-                <td>
-                  <div class="VeranstaltungsText">
-                    <div class="day">TAG</div>
-                    <div class="Veranstaltung">Veranstaltung</div>
-                    <div>Variante1</div>
-                  </div>
-                </td>
-
-                <td>
-                  <div class="agenda">
-                    <ul>
-                      <li>Agenda 1</li>
-                      <li>Agenda 2</li>
-                      <li>Agenda 3</li>
-                      <li>Agenda 4</li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-            </table>
-
-
-
           </div>
 
           <div class="chart-long">
@@ -117,8 +93,31 @@
             </table>
           </div>
 
+          <div class="chart-long">
+            <table>
+              <tr>
+                <td>
+                  <div class="VeranstaltungsText">
+                    <div class="day">TAG</div>
+                    <div class="Veranstaltung">Veranstaltung</div>
+                    <div>Variante1</div>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="agenda">
+                    <ul>
+                      <li>Agenda 1</li>
+                      <li>Agenda 2</li>
+                      <li>Agenda 3</li>
+                      <li>Agenda 4</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
-
       </td>
     </tr>
   </table>

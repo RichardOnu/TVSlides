@@ -7,52 +7,47 @@
   <title>News</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
-
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-  <link rel="stylesheet" href="css/style.css">
-
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 
   <script>
-
     setTimeout(function() {
       window.location.href = 'recap.html';
     }, 7000);
-  </script>
 
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(element => {
+        element.classList.add('visible');
+      });
+    });
+  </script>
 </head>
 
-<body style=" background: url('img/greybg.png') no-repeat center center fixed; background-size: cover;">
+<body style="background: url('img/greybg.png') no-repeat center center fixed; background-size: cover;">
 
 <table>
   <tr>
-
     <td>
-      <div class="chart">
-
+      <div class="chart fade-in">
         <!-- Placeholder for image instead of chart -->
         <div id="image-placeholder" style="width: 100%; height: 300px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center;">
-          <img src="img/generic-image-placeholder.png">
+          <img src="img/generic-image-placeholder.png" class="fade-in">
         </div>
       </div>
-
     </td>
 
     <td>
-      <div class="whitebackground header black ">
+      <div class="whitebackground header black fade-in">
         Heading
-        <div class="xlarge-title">Heading 2</div>
-        <div class="small-text">Fließtext</div>
+        <div class="xlarge-title fade-in">Heading 2</div>
+        <div class="small-text fade-in">Fließtext</div>
       </div>
     </td>
-
   </tr>
-
 </table>
-
 
 </body>
 </html>
