@@ -12,8 +12,7 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
-
+  
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -102,13 +101,6 @@
 <!-- Initialize the CountUp.js here -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    var counter = new CountUp('counter', 0, 1234, 0, 2.5);  // duration is set to 2.5 seconds
-    if (!counter.error) {
-      counter.start();
-    } else {
-      console.error(counter.error);
-    }
-
     setTimeout(function() {
       // window.location.href = 'sendungenImDetail.html';
     }, 5000);
