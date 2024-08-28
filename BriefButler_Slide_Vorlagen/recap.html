@@ -114,6 +114,13 @@
     var currentCount = startValue;
 
     function updateCounter() {
+
+      var now = new Date();
+      if (now.getHours() >= 18 && now.getHours() < 7) {
+        return; // Stop the counter if it's later than 18:00
+      }
+
+
       currentCount += increment;
       if (currentCount >= targetValue) {
         currentCount = targetValue;
