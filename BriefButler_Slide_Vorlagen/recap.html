@@ -14,90 +14,152 @@
   <link rel="manifest" href="site.webmanifest">
 
   <meta name="theme-color" content="#fafafa">
+  <style>
+    /* Throbber CSS */
+    .throbber-advanced {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #3498db;
+      animation: bounce 1.5s infinite ease-in-out;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .dot:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+    }
+
+    /* Additional styles */
+    body {
+      background: url('img/greybg.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      position: relative;
+    }
+
+    #content {
+      display: none; /* Initially hidden */
+    }
+  </style>
 </head>
 
-<body style="background: url('img/greybg.png') no-repeat center center fixed; background-size: cover;">
+<body>
+<!-- Throbber -->
+<div id="throbber" class="throbber-advanced">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
 
-<table>
-  <div style="border-radius: 25px">
-    <tr>
-      <td>
-        <div style="margin-top: 10px; color: #222222" class="recaptitle center" id="recapText">RECAP JULI 2024</div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="restrict main-container">
-          <div class="stack-panel vertical">
-            <!-- Text Rows Section -->
+<!-- Main Content -->
+<div id="content">
+  <table>
+    <div style="border-radius: 25px">
+      <tr>
+        <td>
+          <div style="margin-top: 10px; color: #222222" class="recaptitle center" id="recapText">RECAP JULI 2024</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="restrict main-container">
             <div class="stack-panel vertical">
-              <div class="stack-panel horizontal text-block-container">
-                <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="neukundenAT">15</div>
-                  <div class="text-block grey small-text" id="neukundenATName">Neukunden AT</div>
+              <!-- Text Rows Section -->
+              <div class="stack-panel vertical">
+                <div class="stack-panel horizontal text-block-container">
+                  <div class="stack-panel vertical item">
+                    <div class="text-block blue large-text" id="neukundenAT">15</div>
+                    <div class="text-block grey small-text" id="neukundenATName">Neukunden AT</div>
+                  </div>
+
+                  <div class="stack-panel vertical item">
+                    <div class="text-block blue large-text" id="neukundenDE">10</div>
+                    <div class="text-block grey small-text" id="neukundenDEName">Neukunden DE</div>
+                  </div>
+
+                  <div class="stack-panel vertical item">
+                    <div class="text-block blue large-text" id="neukundenCH">5</div>
+                    <div class="text-block grey small-text" id="neukundenCHName">Neukunden CH</div>
+                  </div>
                 </div>
 
-                <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="neukundenDE">10</div>
-                  <div class="text-block grey small-text" id="neukundenDEName">Neukunden DE</div>
-                </div>
+                <div class="stack-panel horizontal text-block-container">
+                  <div class="stack-panel vertical item">
+                    <div class="text-block blue large-text" id="gesamtSendungen">200000</div>
+                    <div class="text-block grey small-text" id="gesamtSendungenName">Gesamt Sendungen</div>
+                  </div>
 
-                <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="neukundenCH">5</div>
-                  <div class="text-block grey small-text" id="neukundenCHName">Neukunden CH</div>
+                  <div class="stack-panel vertical item">
+                    <div class="text-block blue large-text" id="elektrSendungen">100000</div>
+                    <div class="text-block grey small-text" id="elektrSendungenName">elektr. Sendungen</div>
+                  </div>
+
+                  <div class="stack-panel vertical item">
+                    <div class="text-block blue large-text" id="sendungen">100000</div>
+                    <div class="text-block grey small-text" id="sendungenName">Sendungen</div>
+                  </div>
                 </div>
               </div>
 
-              <div class="stack-panel horizontal text-block-container">
-                <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="gesamtSendungen">200000</div>
-                  <div class="text-block grey small-text" id="gesamtSendungenName">Gesamt Sendungen</div>
-                </div>
+              <!-- Images Section -->
+              <div class="stack-panel vertical">
+                <div style="padding-top: 60px" class="xlarge-title center" id="topKunden">Unsere TOP-KUNDEN</div>
 
-                <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="elektrSendungen">100000</div>
-                  <div class="text-block grey small-text" id="elektrSendungenName">elektr. Sendungen</div>
-                </div>
+                <div class="stack-panel horizontal center">
+                  <div class="stack-panel vertical item">
+                    <img src="img/image.png" class="image-block" id="image1" alt="Customer 1">
+                  </div>
 
-                <div class="stack-panel vertical item">
-                  <div class="text-block blue large-text" id="sendungen">100000</div>
-                  <div class="text-block grey small-text" id="sendungenName">Sendungen</div>
-                </div>
-              </div>
-            </div>
+                  <div class="stack-panel vertical item">
+                    <img src="img/image.png" class="image-block" id="image2" alt="Customer 2">
+                  </div>
 
-            <!-- Images Section -->
-            <div class="stack-panel vertical">
-              <div style="padding-top: 60px" class="xlarge-title center" id="topKunden">Unsere TOP-KUNDEN</div>
+                  <div class="stack-panel vertical item">
+                    <img src="img/image.png" class="image-block" id="image3" alt="Customer 3">
+                  </div>
 
-              <div class="stack-panel horizontal center">
-                <div class="stack-panel vertical item">
-                  <img src="img/image.png" class="image-block" id="image1" alt="Customer 1">
-                </div>
-
-                <div class="stack-panel vertical item">
-                  <img src="img/image.png" class="image-block" id="image2" alt="Customer 2">
-                </div>
-
-                <div class="stack-panel vertical item">
-                  <img src="img/image.png" class="image-block" id="image3" alt="Customer 3">
-                </div>
-
-                <div class="stack-panel vertical item">
-                  <img src="img/image.png" class="image-block" id="image4" alt="Customer 4">
+                  <div class="stack-panel vertical item">
+                    <img src="img/image.png" class="image-block" id="image4" alt="Customer 4">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </td>
+      </tr>
+    </div>
+  </table>
 
-        </div>
-      </td>
-    </tr>
-
-  </div>
-</table>
-
-<img src="img/daughter_phone3_high_heller.png" style="position: absolute; left: 5%; bottom: 5%; height: 800px; width: 400px">
+  <img src="img/daughter_phone3_high_heller.png" style="position: absolute; left: 5%; bottom: 5%; height: 800px; width: 400px">
+</div>
 
 <!-- Initialize the Counter Animation here -->
 <script>
@@ -114,12 +176,10 @@
     var currentCount = startValue;
 
     function updateCounter() {
-
       var now = new Date();
-      if (now.getHours() >= 18 && now.getHours() < 7) {
+      if (now.getHours() >= 18 || now.getHours() < 7) {
         return; // Stop the counter if it's later than 18:00
       }
-
 
       currentCount += increment;
       if (currentCount >= targetValue) {
@@ -138,20 +198,23 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    var counters = document.querySelectorAll('.text-block.blue.large-text');
+    // Hide the throbber and show the content when DOM is fully loaded
+    document.getElementById('throbber').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
 
+    // Initialize counters
+    var counters = document.querySelectorAll('.text-block.blue.large-text');
     counters.forEach(counter => {
       loadCounter(counter);
     });
 
+    // Redirect after a delay
     setTimeout(function() {
       window.location.href = 'sendungenImDetail.html';
     }, 12000);
   });
-
 </script>
 
 </body>
 
 </html>
-
