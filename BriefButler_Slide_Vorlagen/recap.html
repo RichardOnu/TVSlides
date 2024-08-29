@@ -164,10 +164,10 @@
 <!-- Initialize the Counter Animation here -->
 <script>
   function loadCounter(el) {
-    var targetValue = parseInt(el.innerText, 10);
+    var targetValue = parseInt(el.innerText.replace(/\./g, ''), 10);
     var reduction = Math.floor(Math.random() * 10 + 1);
     var startValue = targetValue - reduction < 0 ? targetValue : targetValue - reduction;
-    var duration = 8000;
+    var duration = 10000;
     var frameRate = 60;
 
     var totalFrames = duration / (1000 / frameRate);
@@ -176,6 +176,7 @@
     var currentCount = startValue;
 
     function updateCounter() {
+      updateGesamtSendungen();
       var now = new Date();
       if (now.getHours() >= 18 || now.getHours() < 7) {
         return;
@@ -185,34 +186,40 @@
       if (currentCount >= targetValue) {
         currentCount = targetValue;
       }
-      el.innerText = Math.floor(currentCount);
+      el.innerText = Math.round(currentCount).toLocaleString('de-DE'); // Use Math.round for smoother transitions
 
       if (currentCount < targetValue) {
-
         setTimeout(updateCounter, Math.floor(Math.random() * 100) + 50);
       }
     }
 
-    el.innerText = startValue;
+    el.innerText = startValue.toLocaleString('de-DE');
     setTimeout(updateCounter, Math.floor(Math.random() * 100) + 50);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function updateGesamtSendungen() {
+    var elektrSendungen = parseInt(document.getElementById("elektrSendungen").innerText.replace(/\./g, ''), 10);
+    var sendungen = parseInt(document.getElementById("sendungen").innerText.replace(/\./g, ''), 10);
+    document.getElementById("gesamtSendungen").innerText = (elektrSendungen + sendungen).toLocaleString('de-DE');
+  }
 
+  document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('throbber').style.display = 'none';
     document.getElementById('content').style.display = 'block';
 
-
-    var counters = document.querySelectorAll('.text-block.blue.large-text');
+    // Apply counter to specific elements
+    var counters = document.querySelectorAll('#elektrSendungen, #sendungen');
     counters.forEach(counter => {
       loadCounter(counter);
     });
 
+    updateGesamtSendungen();
 
-    setTimeout(function() {
+    setTimeout(function () {
       window.location.href = 'sendungenImDetail.html';
     }, 12000);
   });
+
 </script>
 
 </body>
