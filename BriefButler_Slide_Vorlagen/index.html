@@ -15,14 +15,21 @@
     body {
       background: url('img/willkommen.png') no-repeat center center fixed;
       background-size: cover;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 2s ease-in-out; /* Fade-in transition */
     }
   </style>
 
-
   <script>
-    setTimeout(function() {
-      window.location.href = 'post.html';
-    }, 5000);
+    document.addEventListener("DOMContentLoaded", function() {
+      // Trigger the fade-in effect by setting opacity to 1
+      document.body.style.opacity = 1;
+
+      // Redirect after 5 seconds
+      setTimeout(function() {
+        window.location.href = 'post.html';
+      }, 5000);
+    });
   </script>
 </head>
 <body>
