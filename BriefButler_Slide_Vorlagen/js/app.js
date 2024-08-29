@@ -91,7 +91,7 @@ function getPercentAndColor() {
 
 async function fetchAndSaveData() {
 
-  // provisional fetching system (does not work in js (file restrictions))
+  // provisional fetching system (does not work with Browsers (file restrictions))
 
   /*
     gesamtSendungen = total sendings
@@ -150,7 +150,7 @@ function updateNumbers(records) {
     return;
   }
   const latestRecord = records[records.length - 1];
-  document.getElementById("gesamtSendungen").textContent = (latestRecord.electronic + latestRecord.physical).toString();
+
   document.getElementById("elektrSendungen").textContent = latestRecord.electronic.toString();
   document.getElementById("sendungen").textContent = latestRecord.physical.toString();
 }
