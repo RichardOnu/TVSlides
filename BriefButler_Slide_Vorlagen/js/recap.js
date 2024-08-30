@@ -52,8 +52,23 @@ function updateNumbers(records) {
     console.error("No records available to update numbers");
     return;
   }
+
   const latestRecord = records[records.length - 1];
 
-  document.getElementById("elektrSendungen").textContent = latestRecord.electronic.toString();
-  document.getElementById("sendungen").textContent = latestRecord.physical.toString();
+  // Get the values from localStorage, or use 0 if not present
+  const storedElectronic = parseInt(localStorage.getItem("electronicBeforeRefresh")) || 0;
+  const storedPhysical = parseInt(localStorage.getItem("physicalBeforeRefresh")) || 0;
+
+  // Compare the stored values with the latest record values
+  const electronicToDisplay = Math.max(latestRecord.electronic, storedElectronic);
+  const physicalToDisplay = Math.max(latestRecord.physical, storedPhysical);
+
+  // Update the DOM with the correct values
+  document.getElementById("elektrSendungen").textContent = electronicToDisplay.toString();
+  document.getElementById("sendungen").textContent = physicalToDisplay.toString();
+
+  // Store the latest values for the next refresh
+  localStorage.setItem("electronicBeforeRefresh", electronicToDisplay.toString());
+  localStorage.setItem("physicalBeforeRefresh", physicalToDisplay.toString());
 }
+
